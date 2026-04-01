@@ -1,13 +1,48 @@
-# Exploring Volatility with ARCH Models for Time Series Forecasting in Python
+# Exploring Volatility with ARCH Models for Time Series Forecasting
 
-**Published:** 2025-01-17
-**Medium:** [https://medium.com/@kyle-t-jones/exploring-volatility-with-arch-models-for-time-series-forecasting-in-python-53966b72c1ce](https://medium.com/@kyle-t-jones/exploring-volatility-with-arch-models-for-time-series-forecasting-in-python-53966b72c1ce)
+This project demonstrates ARCH and GARCH models for volatility forecasting.
 
-## About
+## Article
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
+Medium article: [Exploring Volatility with ARCH Models for Time Series Forecasting in Python](https://medium.com/@kylejones_47003/exploring-volatility-with-arch-models-for-time-series-forecasting-in-python-53966b72c1ce)
 
-## Files
+## Project Structure
 
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
+```
+.
+├── README.md           # This file
+├── main.py            # Main entry point
+├── config.yaml        # Configuration file
+├── requirements.txt   # Python dependencies
+├── src/               # Core functions
+│   ├── core.py        # ARCH/GARCH functions
+│   └── plotting.py    # Tufte-style plotting utilities
+├── tests/             # Unit tests
+├── data/              # Data files
+└── images/            # Generated plots and figures
+```
+
+## Configuration
+
+Edit `config.yaml` to customize:
+- Data source or synthetic generation
+- GARCH parameters (p, q, omega, alpha, beta)
+- Forecast horizon
+- Output settings
+
+## ARCH/GARCH Models
+
+### ARCH (Autoregressive Conditional Heteroskedasticity)
+- Models volatility clustering
+- Volatility depends on past squared errors
+
+### GARCH (Generalized ARCH)
+- Extends ARCH with lagged volatility
+- More flexible and commonly used
+- Captures persistence in volatility
+
+## Caveats
+
+- By default, generates synthetic returns with volatility clustering.
+- GARCH models assume volatility follows specific dynamics.
+- Model selection (p, q) requires careful consideration.
