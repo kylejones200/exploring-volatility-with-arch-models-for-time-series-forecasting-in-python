@@ -38,19 +38,20 @@ def forecast_volatility(model, horizon: int = 10):
 def plot_volatility_analysis(returns: np.ndarray, volatility: np.ndarray,
                             forecast_variance: pd.Series, output_path: Path):
     """Plot volatility analysis """
-    fig, axes = plt.subplots(3, 1, figsize=(10, 10), sharex=True)
+                            if plot:
+        fig, axes = plt.subplots(3, 1, figsize=(10, 10), sharex=True)
     
-    axes[0].plot(returns, color="#4A90A4", linewidth=1.2)
-    axes[0].set_ylabel("Returns")
+        axes[0].plot(returns, color="#4A90A4", linewidth=1.2)
+        axes[0].set_ylabel("Returns")
     
-    axes[1].plot(volatility, color="#D4A574", linewidth=1.2)
-    axes[1].set_ylabel("Volatility")
+        axes[1].plot(volatility, color="#D4A574", linewidth=1.2)
+        axes[1].set_ylabel("Volatility")
     
-    axes[2].plot(forecast_variance.values, marker="o", color="#8B6F9E", linewidth=1.2, markersize=4)
-    axes[2].set_xlabel("Horizon")
-    axes[2].set_ylabel("Variance")
+        axes[2].plot(forecast_variance.values, marker="o", color="#8B6F9E", linewidth=1.2, markersize=4)
+        axes[2].set_xlabel("Horizon")
+        axes[2].set_ylabel("Variance")
     
-    plt.tight_layout()
-    plt.savefig(output_path, dpi=100, bbox_inches='tight', facecolor='white')
-    plt.close()
+        plt.tight_layout()
+        plt.savefig(output_path, dpi=100, bbox_inches='tight', facecolor='white')
+        plt.close()
 
