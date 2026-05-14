@@ -5,9 +5,9 @@ Sometimes in time series work we care about predicting specific value. Other tim
 ### Exploring Volatility with ARCH Models for Time Series Forecasting in Python
 Sometimes in time series work we care about predicting specific value. Other times we just care about the value changing.
 
-**Autoregressive Conditional Heteroskedasticity (ARCH)** models are popular in economics and finance for modeling and forecasting time-varying volatility. ARCH models don't assume constant variance (like most TS models) which is why they are often used for analyzing volatility clustering, such as stock prices or returns.
+Autoregressive Conditional Heteroskedasticity (ARCH) models are popular in economics and finance for modeling and forecasting time-varying volatility. ARCH models don't assume constant variance (like most TS models) which is why they are often used for analyzing volatility clustering, such as stock prices or returns.
 
-**ARCH (q)** models time series data where the variance changes over time. It is particularly useful for capturing **heteroskedasticity** (meaning something that is not constant).
+ARCH (q) models time series data where the variance changes over time. It is particularly useful for capturing heteroskedasticity (meaning something that is not constant).
 
 Understanding volatility is useful for understanding risk/exposure. Lots of volatility demands a higher risk premium than something that is not volatile.
 
