@@ -7,6 +7,7 @@ import logging
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+np.random.seed(42)
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -17,7 +18,6 @@ logging.basicConfig(
 
 
 # Set random seed for reproducibility
-np.random.seed(42)
 
 # Simulate returns with volatility clustering
 n = 1000
