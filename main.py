@@ -41,21 +41,21 @@ def main():
             config['model']['beta'],
             config['data']['seed']
         )
-        returns = pd.Series(returns)
+                returns = pd.Series(returns)
     else:
         raise ValueError("No data source specified")
     
         garch_fit = fit_garch_model(returns, config['model']['p'], config['model']['q'])
     logging.info(garch_fit.summary())
     
-        forecast_variance = forecast_volatility(garch_fit, config['forecast']['horizon'])
+    forecast_variance = forecast_volatility(garch_fit, config['forecast']['horizon'])
     
     if config['data']['generate_synthetic']:
         plot_volatility_analysis(returns.values, volatility, forecast_variance,
                                output_dir / 'volatility_analysis.png')
     else:
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+        logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
         plot_volatility_analysis(returns.values, returns.values, forecast_variance,
                                output_dir / 'volatility_analysis.png')
     

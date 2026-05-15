@@ -38,7 +38,7 @@ def forecast_volatility(model, horizon: int = 10):
 def plot_volatility_analysis(returns: np.ndarray, volatility: np.ndarray,
                             forecast_variance: pd.Series, output_path: Path):
     """Plot volatility analysis """
-                            if plot:
+    if plot:
         fig, axes = plt.subplots(3, 1, figsize=(10, 10), sharex=True)
     
         axes[0].plot(returns, color="#4A90A4", linewidth=1.2)
