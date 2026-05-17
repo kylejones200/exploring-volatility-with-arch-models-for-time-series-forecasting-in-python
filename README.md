@@ -46,3 +46,11 @@ Edit `config.yaml` to customize:
 - By default, generates synthetic returns with volatility clustering.
 - GARCH models assume volatility follows specific dynamics.
 - Model selection (p, q) requires careful consideration.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
