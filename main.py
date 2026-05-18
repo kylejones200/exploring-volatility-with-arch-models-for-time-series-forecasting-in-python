@@ -9,12 +9,11 @@ import argparse
 import logging
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import yaml
 
 
-def load_config(config_path: Path = None) -> dict:
+def load_config(config_path: Path | None = None) -> dict:
     """Load configuration from YAML file."""
     if config_path is None:
         config_path = Path(__file__).parent / "config.yaml"
@@ -35,7 +34,6 @@ def main():
         "--output-dir", type=Path, default=None, help="Output directory"
     )
     args = parser.parse_args()
-
     config = load_config(args.config)
     output_dir = (
         Path(args.output_dir)
@@ -43,7 +41,6 @@ def main():
         else Path(config["output"]["figures_dir"])
     )
     output_dir.mkdir(exist_ok=True)
-
     if args.data_path and args.data_path.exists():
         returns = pd.read_csv(args.data_path)["returns"]
     elif config["data"]["generate_synthetic"]:
@@ -57,12 +54,9 @@ def main():
         returns = pd.Series(returns)
     else:
         raise ValueError("No data source specified")
-
         garch_fit = fit_garch_model(returns, config["model"]["p"], config["model"]["q"])
     logging.info(garch_fit.summary())
-
     forecast_variance = forecast_volatility(garch_fit, config["forecast"]["horizon"])
-
     if config["data"]["generate_synthetic"]:
         plot_volatility_analysis(
             returns.values,
