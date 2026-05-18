@@ -2,6 +2,14 @@
 
 This project demonstrates ARCH and GARCH models for volatility forecasting.
 
+## Business context
+
+Sometimes in time series work we care about predicting specific value. Other times we just care about the value changing.
+
+Sometimes in time series work we care about predicting specific value. Other times we just care about the value changing.
+
+Autoregressive Conditional Heteroskedasticity (ARCH) models are popular in economics and finance for modeling and forecasting time-varying volatility. ARCH models don't assume constant variance (like most TS models) which is why they are often used for analyzing volatility clustering, such as stock prices or returns.
+
 ## Article
 
 Medium article: [Exploring Volatility with ARCH Models for Time Series Forecasting in Python](https://medium.com/@kylejones_47003/exploring-volatility-with-arch-models-for-time-series-forecasting-in-python-53966b72c1ce)
