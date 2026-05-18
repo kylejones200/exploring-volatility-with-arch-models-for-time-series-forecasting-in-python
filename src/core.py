@@ -27,7 +27,7 @@ def forecast_volatility(model, horizon: int=10):
     forecast = model.forecast(horizon=horizon)
     return forecast.variance.iloc[-1]
 
-def plot_volatility_analysis(returns: np.ndarray, volatility: np.ndarray, forecast_variance: pd.Series, output_path: Path, plot: False=False):
+def plot_volatility_analysis(returns: np.ndarray, volatility: np.ndarray, forecast_variance: pd.Series, output_path: Path, plot: bool = False):
     """Plot volatility analysis"""
     if not plot:
         return
