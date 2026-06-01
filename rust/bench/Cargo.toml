@@ -1,0 +1,13 @@
+[package]
+name = "exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_bench"
+description = "Standalone Rust benchmark (no Python)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "bench"
+path = "src/main.rs"
+
+[dependencies]
+exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_core = { path = "../core" }

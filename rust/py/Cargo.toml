@@ -1,0 +1,15 @@
+[package]
+name = "exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_rs"
+description = "Python bindings (PyO3) for exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_core = { path = "../core" }
+pyo3 = { version = "0.28", features = ["extension-module"] }
+numpy = "0.28"

@@ -1,0 +1,9 @@
+[package]
+name = "exploring_volatility_with_arch_models_for_time_series_forecasting_in_python_core"
+description = "GARCH(1,1) conditional variance"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+path = "src/lib.rs"
